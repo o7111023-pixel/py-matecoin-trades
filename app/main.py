@@ -5,12 +5,12 @@ from decimal import Decimal, getcontext
 getcontext().prec = 28
 
 
-def calculate_profit(filename):
-    with open(filename, 'r') as f:
+def calculate_profit(filename) -> None:
+    with open(filename, "r") as f:
         trades = json.load(f)
 
-    earned_money = Decimal('0')
-    matecoin_account = Decimal('0')
+    earned_money = Decimal("0")
+    matecoin_account = Decimal("0")
 
     for trade in trades:
         price = Decimal(trade["matecoin_price"])
