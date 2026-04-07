@@ -5,7 +5,7 @@ from decimal import Decimal, getcontext
 getcontext().prec = 28
 
 
-def calculate_profit(filename) -> None:
+def calculate_profit(filename: str) -> None:
     with open(filename, "r") as f:
         trades = json.load(f)
 
